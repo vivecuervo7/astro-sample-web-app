@@ -1,0 +1,21 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SvelteButton from "../components/svelte/SvelteButton.svelte";
+import { ReactButton } from "../components//react/ReactButton.tsx";
+---
+
+<BaseLayout pageTitle="Svelte + React">
+  <div class="container">
+    <SvelteButton client:load />
+    <ReactButton client:load />
+  </div>
+</BaseLayout>
+
+<style>
+  .container {
+    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+    background-color: lightgray;
+  }
+</style>
